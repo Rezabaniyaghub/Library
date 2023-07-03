@@ -44,18 +44,6 @@ namespace YourProject.Controllers
 
         public IActionResult Create()
         {
-            // در این قسمت می‌توانید لیست اعضا و کتاب‌ها را از پایگاه داده خوانده و به مدل منتقل کنید
-            // سپس مدل را به صفحه Create ارسال کنید
-            // مثال: 
-            // var members = await _context.Members.ToListAsync();
-            // var books = await _context.Books.ToListAsync();
-            // var viewModel = new BarrowViewModel
-            // {
-            //     Members = members,
-            //     Books = books
-            // };
-            // return View(viewModel);
-
             return View();
         }
 
