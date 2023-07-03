@@ -1,0 +1,23 @@
+﻿@model Library1.Member
+
+<form action="/Member/Create" method="post" asp-antiforgery="true" class="container">
+    <div class="row col-md-3">
+        نام
+        <input type="text" asp-for="Name" /> 
+    </div>
+    <div class="row col-md-3">
+        ایمیل
+        <input type="text" asp-for="Email" /> 
+    </div>
+    <div class="row col-md-3">
+        آدرس
+        <input type="text" asp-for="Address" /> 
+    </div>
+    <div class="row col-md-3">
+        شماره تلفن
+        <input type="tel" asp-for="PhoneNumber" /> 
+    </div>
+    <div class="col-md-3 form-group">
+        <button type="submit" class="btn btn-primary mt-3">ذخیره</button>
+    </div>
+</form>

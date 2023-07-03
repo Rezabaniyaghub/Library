@@ -1,0 +1,21 @@
+﻿@model Barrow
+
+<h2>حذف امانت</h2>
+
+<p>آیا از حذف این امانت اطمینان دارید؟</p>
+
+<div>
+    <h4>شناسه کتاب: @Model.BookId</h4>
+    <h4>شناسه عضو: @Model.MemberId</h4>
+    <h4>تحویل داده شده: @Model.WasDelivered</h4>
+</div>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        <input type="submit" class="btn btn-sm btn-outline-warning" value="حذف" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-sm btn-outline-primary" class="btn btn-secondary">بازگشت</a>
+    </div>
+}

@@ -1,0 +1,37 @@
+﻿@model Library1.Book
+
+<form action="/Book/Create" method="post" asp-antiforgery="true" class="container">
+    <div class="row col-md-3">
+        نام کتاب
+        <input type="text" asp-for="Name" />
+    </div>
+    <div class="row col-md-3">
+        توضیحات
+        <input type="text" asp-for="Description" />
+    </div> 
+    <div class="row col-md-3">
+        عنوان
+        <input type="text" asp-for="Title" />
+    </div> 
+    <div class="row col-md-3">
+        نویسنده
+        <input type="text" asp-for="Auther" />
+    </div> 
+    <div class="row col-md-3">
+        آدرس
+        <input type="text" asp-for="Address" />
+    </div> 
+    <div class="row col-md-3">
+        تعداد کل
+        <input type="number" asp-for="TotalNumber" />
+    </div> 
+    <div class="row col-md-3">
+        
+        <label asp-for="PublishDate">تاریخ انتشار:</label>
+        <input asp-for="PublishDate" class="form-control" />
+    </div>
+    <div class="col-md-3 form-group">
+        <button type="submit" class="btn btn-primary mt-3">ذخیره</button>
+    </div>
+
+</form>

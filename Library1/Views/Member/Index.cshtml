@@ -1,0 +1,34 @@
+﻿@model List<Member>
+@{
+    ViewData["Title"] = "لیست اعضا";
+}
+
+<div class="container">
+    <a asp-controller="Member" asp-action="Create" class="btn btn-sm btn-primary">ثبت نام</a>
+</div>
+
+<div>
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>شناسه</th>
+                <th>نام</th>
+                <th>ایمیل</th>
+                <th>آدرس</th>
+                <th>شماره تماس</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Email</td>
+                    <td>@item.Address</td>
+                    <td>@item.PhoneNumber</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

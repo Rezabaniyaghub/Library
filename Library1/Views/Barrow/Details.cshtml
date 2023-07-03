@@ -1,0 +1,17 @@
+﻿@model Barrow
+
+<h2>جزئیات امانت</h2>
+
+<div>
+    <h4>شناسه کتاب: @Model.BookId</h4>
+    <h4>شناسه عضو: @Model.MemberId</h4>
+    <h4>تحویل داده شده: @Model.WasDelivered</h4>
+    <h4>تاریخ شروع: @Model.StartDate</h4>
+    <h4>تاریخ پایان: @Model.EndtDate</h4>
+</div>
+
+<p>
+    <a asp-action="Edit" class="btn btn-sm btn-outline-warning" asp-route-id="@Model.Id">ویرایش</a> |
+    <a asp-action="Delete" class="btn btn-sm btn-outline-danger" asp-route-id="@Model.Id">حذف</a> |
+    <a asp-action="Index" class="btn btn-sm btn-outline-primary">بازگشت</a>
+</p>

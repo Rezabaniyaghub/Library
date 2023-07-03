@@ -1,0 +1,39 @@
+﻿@model Barrow
+
+<h2>ایجاد امانت جدید</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group col-md-3">
+        <label asp-for="BookId">شناسه کتاب:</label>
+        <input asp-for="BookId" class="form-control" />
+        <span asp-validation-for="BookId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group col-md-3">
+        <label asp-for="MemberId">شناسه عضو:</label>
+        <input asp-for="MemberId" class="form-control" />
+        <span asp-validation-for="MemberId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group col-md-3">
+        <label asp-for="WasDelivered">تحویل داده شده:</label>
+        <input asp-for="WasDelivered" class="form-control" />
+        <span asp-validation-for="WasDelivered" class="text-danger"></span>
+    </div>
+
+    <div class="form-group col-md-3">
+        <label asp-for="StartDate">تاریخ شروع:</label>
+        <input asp-for="StartDate" class="form-control" />
+        <span asp-validation-for="StartDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group col-md-3">
+        <label asp-for="EndtDate">تاریخ پایان:</label>
+        <input asp-for="EndtDate" class="form-control" />
+        <span asp-validation-for="EndtDate" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">ایجاد</button>
+    <a asp-action="Index" class="btn btn-secondary">لغو</a>
+}
